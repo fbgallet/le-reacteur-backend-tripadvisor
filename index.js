@@ -30,7 +30,7 @@ app.post("/form", async (req, res) => {
     //   On crée un objet messageData qui contient des informations concernant le mail (qui m'envoie le mail, adresse vers laquelle je veux envoyer le mail, titre et contenu du mail) :
     const messageData = {
       from: `${firstname} ${lastname} <${email}>`,
-      to: "fbgallet@gmail.com",
+      to: process.env.MY_MAIL,
       subject: object,
       text: message,
     };
